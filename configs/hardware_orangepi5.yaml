@@ -1,0 +1,29 @@
+# Target Hardware Configuration: Orange Pi 5 (RK3588S)
+device:
+  name: "Orange Pi 5"
+  soc: "Rockchip RK3588S"
+  architecture: "aarch64"
+  os: "Linux ARM64"
+  cpu:
+    total_cores: 8
+    big_cores: "4x Cortex-A76"
+    little_cores: "4x Cortex-A55"
+  npu:
+    name: "Rockchip NPU"
+    tops: 6.0
+    cores: 3
+
+memory:
+  physical_ram_gib: 8.0
+  safe_budget_gib: 6.5
+  oom_warning_gib: 6.0
+  zram:
+    enabled: true
+    size_gb: 4
+    algorithm: "lz4"
+    priority: 100
+
+benchmark_constraints:
+  context_lengths: [512, 1024, 2048, 4096]
+  stress_test_turns: 15
+  offline_only: true

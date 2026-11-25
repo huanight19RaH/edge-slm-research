@@ -1,0 +1,22 @@
+# Core configuration & utilities
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+requests>=2.31.0
+
+# Model download & tokenizer inspection (Host / Calibration prep)
+huggingface-hub>=0.23.0
+transformers>=4.44.0
+numpy>=1.26.0
+
+# System telemetry, memory & latency profiling (TV3 / TV5)
+psutil>=5.9.8
+pandas>=2.2.0
+
+# Offline chatbot UI & local serving (TV5)
+gradio>=4.44.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+
+# Testing & QA
+pytest>=8.2.0

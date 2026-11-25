@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Large model weights & quantized artifacts (never commit to Git)
+*.gguf
+*.rkllm
+*.rknn
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+models/
+weights/
+checkpoints/
+hf_cache/
+
+# C/C++ build artifacts (e.g., llama.cpp / rkllm builds)
+*.o
+*.a
+*.out
+cmake-build-*/
+
+# Raw temporary logs & profiling dumps (keep structured CSV/JSON results tracked)
+*.log
+*.tmp
+*.bak
+results/raw_dumps/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables & local secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Local knowledge graph cache
+graphify-out/
