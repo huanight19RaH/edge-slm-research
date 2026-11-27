@@ -1,0 +1,57 @@
+{
+  "pinned_llamacpp_tag": "b12776",
+  "timestamp_utc": "2026-11-26T13:31:51.535486+00:00",
+  "hf_dir": "F:\\SLM_OrangePi5\\results\\p0_07_smoke_hf",
+  "artifacts": {
+    "F16": {
+      "path": "F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-f16.gguf",
+      "bytes": 45422688,
+      "gib": 0.0423,
+      "sha256": "0612394cf0147c320bd988fd539895a888b7786983b88fb92dc2c8e15ad4e729",
+      "command": "F:\\SLM_OrangePi5\\.venv\\Scripts\\python.exe F:\\SLM_OrangePi5\\tools\\llama_cpp_b12776\\repo\\convert_hf_to_gguf.py F:\\SLM_OrangePi5\\results\\p0_07_smoke_hf --outfile F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-f16.gguf --outtype f16"
+    },
+    "Q8_0": {
+      "path": "F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-Q8_0.gguf",
+      "bytes": 26913888,
+      "gib": 0.0251,
+      "sha256": "c816882ce9d8a715f28ca324886071aafa0c95640238330ab5bcbbf9fbf173b5",
+      "command": "F:\\SLM_OrangePi5\\tools\\llama_cpp_b12776\\bin\\llama-quantize.exe F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-f16.gguf F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-Q8_0.gguf Q8_0"
+    },
+    "Q4_K_M": {
+      "path": "F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-Q4_K_M.gguf",
+      "bytes": 26806624,
+      "gib": 0.025,
+      "sha256": "094202e377e546d20c0ebd66bf08585ea4b6ec3392809764c3e973b6b1428fa9",
+      "command": "F:\\SLM_OrangePi5\\tools\\llama_cpp_b12776\\bin\\llama-quantize.exe F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-f16.gguf F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-Q4_K_M.gguf Q4_K_M"
+    }
+  },
+  "convert_log_tail": [
+    "    {%- endif %}",
+    "{%- endfor %}",
+    "{%- if add_generation_prompt %}",
+    "    {{- '<|im_start|>assistant\\n' }}",
+    "{%- endif %}",
+    "",
+    "INFO:gguf.vocab:Setting normalizer_nfc to True",
+    "INFO:gguf.vocab:Setting clean_spaces to False",
+    "INFO:gguf.gguf_writer:Writing the following files:",
+    "INFO:gguf.gguf_writer:F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-f16.gguf: n_tensors = 26, total_size = 39.5M",
+    "",
+    "Writing:   0%|          | 0.00/39.5M [00:00<?, ?byte/s]",
+    "Writing:  98%|█████████▊| 38.9M/39.5M [00:00<00:00, 346Mbyte/s]",
+    "Writing: 100%|██████████| 39.5M/39.5M [00:00<00:00, 285Mbyte/s]",
+    "INFO:hf-to-gguf:Model successfully exported to F:\\SLM_OrangePi5\\results\\p0_07_gguf_smoke\\qwen25-tiny-smoke-f16.gguf"
+  ],
+  "inference_smoke": {
+    "Q8_0": {
+      "returncode": 0,
+      "stdout_preview": "Loading model... \n\n▄▄ ▄▄\n██ ██\n██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄\n██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██\n██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀\n                         ",
+      "stderr_tail": []
+    },
+    "Q4_K_M": {
+      "returncode": 0,
+      "stdout_preview": "Loading model... \n\n▄▄ ▄▄\n██ ██\n██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄\n██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██\n██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀\n                         ",
+      "stderr_tail": []
+    }
+  }
+}

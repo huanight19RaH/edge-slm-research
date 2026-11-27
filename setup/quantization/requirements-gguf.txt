@@ -1,0 +1,10 @@
+# Lightweight dependencies for HF config/tokenizer verification and GGUF conversion (Windows/Linux)
+huggingface-hub>=0.26.0,<1.0.0
+transformers>=4.44.0
+torch>=2.5.0
+safetensors>=0.4.5
+sentencepiece>=0.2.0
+numpy>=1.26.0,<2.3.0
+gguf>=0.14.0
+requests>=2.32.0
+pyyaml>=6.0.1

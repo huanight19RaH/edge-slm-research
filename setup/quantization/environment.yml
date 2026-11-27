@@ -1,0 +1,43 @@
+# P0-04: Isolated Python Environment for Model Conversion & Quantization (Host x86_64 Linux)
+# Pinned against airockchip/rknn-llm release-v1.3.1 (rkllm-toolkit/packages/requirements.txt)
+# Usage (on Linux x86_64 or WSL2 Ubuntu):
+#   conda env create -f quantization/environment.yml
+#   conda activate slm_opi5_quant
+#   pip install rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl
+
+name: slm_opi5_quant
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12.7
+  - pip=24.3
+  - git
+  - pip:
+      # Core ML / Quantization (pinned per rkllm-toolkit 1.3.1 requirements.txt)
+      - numpy>=1.23.1,<=1.26.4
+      - torch==2.6.0
+      - torchvision==0.21.0
+      - transformers==5.8.0
+      - safetensors==0.5.3
+      - sentencepiece==0.2.0
+      - accelerate>=1.0.1,<=1.5.2
+      - datasets==4.1.1
+      - pyarrow==21.0.0
+      - tiktoken>=0.7.0,<=0.9.0
+      - huggingface-hub>=0.26.0
+      - protobuf>=4.21.6,<=4.25.4
+      - einops==0.4.1
+      - scipy>=1.5.4
+      - tqdm>=4.64.0
+      - Jinja2==3.1.4
+      - optimum==1.23.3
+      - auto_gptq==0.7.1
+      - jsonschema==4.23.0
+      - jsonlines==4.0.0
+      - tabulate==0.9.0
+      - easydict==1.13
+      - flatbuffers==24.3.25
+      # GGUF conversion utilities (llama.cpp b12776)
+      - gguf>=0.14.0
+      - pyyaml>=6.0.1
