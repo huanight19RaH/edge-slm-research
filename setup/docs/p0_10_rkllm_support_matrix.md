@@ -27,11 +27,12 @@
 
 ---
 
-## 2. Trạng thái Smoke Test trên máy hiện tại (Windows Host)
+## 2. Trạng thái Smoke Test trên Linux `x86_64`
 
-- **Kiểm tra môi trường:** `rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl` chỉ phân phối cho **Linux `x86_64`** (sử dụng thư viện native `.so` và `torch==2.6.0`, `transformers==5.8.0`).
-- **Trạng thái máy trạm hiện tại:** Windows host (`wsl -l -v` chưa cài distro Linux nào).
+- **Kiểm tra môi trường ([`p0_10_env_check.json`](../results/p0_10_env_check.json)):** Linux `x86_64`, Python `3.12.3`, đã cài thành công `rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl` trong `.venv_rkllm` (`rkllm_installed: true`).
 - **Hành động đã hoàn tất:**
-  1. Đã viết sẵn script [`convert_rkllm.py`](../quantization/convert_rkllm.py) cài guardrail chặn `w4a16` trên `rk3588` và xuất manifest SHA256.
-  2. Đã viết sẵn script [`setup_wsl_rkllm.sh`](../quantization/setup_wsl_rkllm.sh) để cài đặt và chạy smoke test `Qwen/Qwen2.5-0.5B-Instruct` (`w8a8`) ngay khi bật WSL2 Ubuntu (`wsl --install -d Ubuntu`) hoặc trên máy Linux `x86_64`.
-- **Blocker cần mở trước khi đóng `P0-10`:** Chạy `bash quantization/setup_wsl_rkllm.sh` trong WSL2 Ubuntu / Linux `x86_64` để sinh tệp `.rkllm` mẫu và log thực tế (`results/p0_10_rkllm_smoke/smoke_convert.log`) bàn giao cho Nhật test `P0-11`.
+  1. Cài đặt guardrail trong [`convert_rkllm.py`](../quantization/convert_rkllm.py) chặn `w4a16` trên `rk3588` (exit code `3`, đã ghi log tại [`p0_10_w4a16_guardrail.txt`](../results/p0_10_w4a16_guardrail.txt)).
+  2. Tải model smoke test `Qwen/Qwen2.5-0.5B-Instruct` (`sha: 7ae557604adf67be50417f59c2c2f167def9a775`) và chuyển đổi thành công sang `.rkllm` (`dtype=w8a8`, `optimization_level=0`, `num_npu_core=3`, `max_context=2048`, `target_platform=rk3588`).
+  3. **Artifact bàn giao cho `P0-11` (Nhật):**
+     - Model: `Qwen2.5-0.5B-Instruct_w8a8_opt0_rk3588.rkllm` (`792,129,860` bytes / ~`756 MiB`, SHA256: `79cf529516b1c163c71b0178f7efbaaa66ce51c8f3e87a16397287a63011f727` — file nhị phân `.rkllm` được loại trừ khỏi Git theo `.gitignore`).
+     - Manifest & log: [`Qwen2.5-0.5B-Instruct_w8a8_opt0_rk3588_manifest.json`](../results/p0_10_rkllm_smoke/Qwen2.5-0.5B-Instruct_w8a8_opt0_rk3588_manifest.json) và [`smoke_convert.txt`](../results/p0_10_rkllm_smoke/smoke_convert.txt).

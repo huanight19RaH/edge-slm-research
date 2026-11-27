@@ -7,7 +7,7 @@ RKLLM_TAG="release-v1.3.1"
 WHL_URL="https://github.com/airockchip/rknn-llm/raw/${RKLLM_TAG}/rkllm-toolkit/packages/rkllm_toolkit-1.3.1-cp312-cp312-linux_x86_64.whl"
 REQ_URL="https://raw.githubusercontent.com/airockchip/rknn-llm/${RKLLM_TAG}/rkllm-toolkit/packages/requirements.txt"
 
-mkdir -p tools/rkllm_sdk results/p0_10_rkllm_smoke
+mkdir -p tools/rkllm_sdk setup/results/p0_10_rkllm_smoke
 
 echo "[1/4] Downloading pinned RKLLM v1.3.1 wheel and requirements..."
 curl -fL -o tools/rkllm_sdk/requirements.txt "${REQ_URL}"
@@ -29,12 +29,12 @@ snapshot_download(
 "
 
 echo "[4/4] Running RKLLM smoke conversion (w8a8 on rk3588)..."
-.venv_rkllm/bin/python quantization/convert_rkllm.py \
+.venv_rkllm/bin/python setup/quantization/convert_rkllm.py \
   --model-dir models/Qwen2.5-0.5B-Instruct \
-  --out-dir results/p0_10_rkllm_smoke \
+  --out-dir setup/results/p0_10_rkllm_smoke \
   --platform rk3588 \
   --dtype w8a8 \
   --optimization-level 0 \
   --max-context 2048 \
   --device cpu \
-  2>&1 | tee results/p0_10_rkllm_smoke/smoke_convert.log
+  2>&1 | tee setup/results/p0_10_rkllm_smoke/smoke_convert.log

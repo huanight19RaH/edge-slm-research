@@ -103,8 +103,11 @@
       "target_platform": "rk3588",
       "supported_dtypes_on_rk3588": ["w8a8", "w8a8_g128", "w8a8_g256", "w8a8_g512"],
       "unsupported_dtypes_on_rk3588": ["w4a16", "w4a16_g32", "w4a16_g64", "w4a16_g128", "w4a8_g32"],
-      "smoke_test_status": "PENDING_LINUX_X86_64",
-      "smoke_test_blocker": "Windows host without WSL2 distro; rkllm-toolkit 1.3.1 wheels are linux_x86_64 only."
+      "smoke_test_status": "PASSED",
+      "smoke_test_log": "results/p0_10_rkllm_smoke/smoke_convert.txt",
+      "smoke_test_manifest": "results/p0_10_rkllm_smoke/Qwen2.5-0.5B-Instruct_w8a8_opt0_rk3588_manifest.json",
+      "smoke_test_artifact_bytes": 792129860,
+      "smoke_test_artifact_sha256": "79cf529516b1c163c71b0178f7efbaaa66ce51c8f3e87a16397287a63011f727"
     }
   },
   "research_limitations": [

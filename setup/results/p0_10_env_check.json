@@ -1,7 +1,7 @@
 {
-  "os": "Windows",
-  "machine": "AMD64",
-  "python": "3.12.12",
-  "rkllm_installed": false,
-  "rkllm_error": "ModuleNotFoundError(\"No module named 'rkllm'\")"
+  "os": "Linux",
+  "machine": "x86_64",
+  "python": "3.12.3",
+  "rkllm_installed": true,
+  "rkllm_error": null
 }
