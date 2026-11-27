@@ -10,7 +10,8 @@ setup/
 ├── docs/
 │   ├── p0_01_compatibility_matrix.md     # P0-01: So sánh Qwen2.5-3B vs Llama-3.2-3B & tương thích RKLLM
 │   ├── p0_10_rkllm_support_matrix.md     # P0-10: Ma trận dtype RKLLM v1.3.1 cho RK3588 & trạng thái host
-│   └── p0_13_reproducibility_guide.md    # P0-13: Hướng dẫn tái lập & ghi nhận giới hạn kỹ thuật
+│   ├── p0_13_reproducibility_guide.md    # P0-13: Hướng dẫn tái lập & ghi nhận giới hạn kỹ thuật
+│   └── p0_setup_summary.md               # Tổng kết toàn bộ task Phase 0 (Setup) của Phúc
 ├── quantization/
 │   ├── environment.yml                   # P0-04: Môi trường Conda Linux x86_64 (RKLLM 1.3.1 + GGUF)
 │   ├── requirements-gguf.txt             # P0-04: Dependencies nhẹ cho verify HF & GGUF
