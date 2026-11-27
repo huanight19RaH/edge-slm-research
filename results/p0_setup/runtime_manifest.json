@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-27 10:05:14 +07",
+  "runtime": {
+    "name": "llama.cpp",
+    "version": "1.1.0-dev (commit e0b9fd7)",
+    "binary": "/home/orangepi/TeamB_SLM/runtime/llama.cpp/build/bin/llama-cli",
+    "architecture": "aarch64",
+    "compiler": "GNU 15.2.0 (Ubuntu)",
+    "acceleration": "ARM NEON Dot Product (+dotprod) + FP16 vector arithmetic",
+    "threads_used": 4
+  },
+  "model": {
+    "name": "Qwen2.5-0.5B-Instruct-GGUF",
+    "format": "GGUF",
+    "quantization": "Q4_K_M",
+    "size_bytes": 491400032,
+    "size_mib": 468.64,
+    "context_window": 512
+  },
+  "performance": {
+    "peak_rss_mib": 740.39,
+    "total_elapsed_sec": 5.04,
+    "temp_start_c": 43.5,
+    "temp_end_c": 59.2,
+    "exit_code": 0
+  }
+}

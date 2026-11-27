@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-11-27 09:47:23 +07",
+  "board": {
+    "name": "Orange Pi 5",
+    "soc": "Rockchip RK3588S",
+    "architecture": "aarch64",
+    "kernel": "6.1.115-vendor-rk35xx",
+    "os_distro": "Ubuntu 26.04 (Resolute Raccoon) ARM64"
+  },
+  "cpu": {
+    "total_logical_cores": 8,
+    "total_physical_cores": 8,
+    "architecture_details": "8 cores big.LITTLE: 4x Cortex-A76 (performance) + 4x Cortex-A55 (efficiency)",
+    "cortex_a76_max_freq_mhz": 2256.0,
+    "cortex_a55_max_freq_mhz": 1800.0,
+    "governor": "ondemand",
+    "isa_features": [
+      "fp",
+      "asimd",
+      "evtstrm",
+      "aes",
+      "pmull",
+      "sha1",
+      "sha2",
+      "crc32",
+      "atomics",
+      "fphp",
+      "asimdhp",
+      "cpuid",
+      "asimdrdm",
+      "lrcpc",
+      "dcpop",
+      "asimddp"
+    ]
+  },
+  "memory": {
+    "total_ram_bytes": 8314740736,
+    "total_ram_gib": 7.744,
+    "available_ram_gib": 6.272,
+    "free_ram_gib": 1.368,
+    "safe_budget_gib": 6.5,
+    "oom_threshold_gib": 7.0
+  },
+  "swap_and_zram": {
+    "swap_total_gib": 3.872,
+    "swap_used_gib": 0.038,
+    "swap_free_gib": 3.834,
+    "devices": "NAME       DISKSIZE DATA COMPR ALGORITHM STREAMS ZERO-PAGES TOTAL MEM-LIMIT MEM-USED MIGRATED COMP-RATIO MOUNTPOINT\n/dev/zram1     200M   0B    0B zstd            8          0    0B        0B       0B       0B        nan \n/dev/zram0     3.9G  38M 11.5M lzo-rle         8        297 16.9M      3.9G    31.6M     446B     2.2476 [SWAP]"
+  },
+  "storage": {
+    "mount_point": "/",
+    "device": "/dev/nvme0n1p1",
+    "type": "NVMe SSD PCIe 3.0",
+    "total_gib": 464.64,
+    "used_gib": 71.49,
+    "free_gib": 388.34,
+    "percent_used": 15.5
+  },
+  "npu": {
+    "hardware": "Rockchip NPU 3-core (6.0 TOPS)",
+    "driver_version": "RKNPU driver: v0.9.8",
+    "device_node": "/dev/dri/renderD129",
+    "device_node_perms": "crw-rw----+ 1 root render 226, 129 Nov 26 12:59 /dev/dri/renderD129",
+    "dmesg_status": "[    4.978866] RKNPU fdab0000.npu: pvtm-volt-sel=3\n[    4.979065] RKNPU fdab0000.npu: Looking up rknpu-supply from device tree\n[    4.979160] debugfs: Directory 'fdab0000.npu-rknpu' with parent 'vdd_npu_s0' already present!\n[    4.979781] RKNPU fdab0000.npu: Looking up mem-supply from device tree\n[    4.982071] RKNPU fdab0000.npu: avs=0\n[    4.982279] RKNPU fdab0000.npu: l=15000 h=85000 hyst=5000 l_limit=0 h_limit=800000000 h_table=0"
+  },
+  "power_and_thermals": {
+    "supply": "USB-C 5V/4A Power Adapter",
+    "temperatures_celsius": {
+      "soc-thermal": 43.5,
+      "bigcore0-thermal": 43.5,
+      "bigcore1-thermal": 43.5,
+      "littlecore-thermal": 43.5,
+      "center-thermal": 42.5,
+      "gpu-thermal": 42.5,
+      "npu-thermal": 42.5
+    }
+  },
+  "remote_access": {
+    "tailscale_ip": "100.115.216.86",
+    "lan_ip": "10.136.121.206",
+    "default_user": "orangepi",
+    "ssh_port": 22,
+    "authentication": "Ed25519 public key / authorized_keys"
+  }
+}

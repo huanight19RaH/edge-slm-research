@@ -46,6 +46,10 @@ checkpoints/
 hf_cache/
 
 # C/C++ build artifacts (e.g., llama.cpp / rkllm builds)
+runtime/llama.cpp/
+runtime/rkllm/build/
+runtime/rkllm/lib/
+runtime/rkllm/llm_demo
 *.o
 *.a
 *.out
@@ -53,6 +57,7 @@ cmake-build-*/
 
 # Raw temporary logs & profiling dumps (keep structured CSV/JSON results tracked)
 *.log
+!results/p0_setup/*.log
 *.tmp
 *.bak
 results/raw_dumps/

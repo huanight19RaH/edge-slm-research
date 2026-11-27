@@ -1,0 +1,91 @@
+=== ORANGE PI 5 IDLE BASELINE SNAPSHOT ===
+Timestamp: 2026-11-27 09:47:23 +07
+
+--- FREE -H ---
+total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       1.5Gi       1.4Gi       827Mi       5.8Gi       6.3Gi
+Swap:          3.9Gi        38Mi       3.8Gi
+
+--- /PROC/MEMINFO (Top 20 lines) ---
+MemTotal:        8119864 kB
+MemFree:         1433128 kB
+MemAvailable:    6575884 kB
+Buffers:          240840 kB
+Cached:          5575352 kB
+SwapCached:            4 kB
+Active:          1891508 kB
+Inactive:        4063556 kB
+Active(anon):     184972 kB
+Inactive(anon):   800960 kB
+Active(file):    1706536 kB
+Inactive(file):  3262596 kB
+Unevictable:        8100 kB
+Mlocked:               0 kB
+SwapTotal:       4059928 kB
+SwapFree:        4020248 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 4 kB
+Writeback:             0 kB
+
+--- ZRAMCTL ---
+NAME       ALGORITHM DISKSIZE DATA COMPR TOTAL STREAMS MOUNTPOINT
+/dev/zram1 zstd          200M   0B    0B    0B       8 
+/dev/zram0 lzo-rle       3.9G  38M 11.5M 16.9M       8 [SWAP]
+
+--- SWAPON --SHOW ---
+NAME       TYPE      SIZE  USED PRIO
+/dev/zram0 partition 3.9G 38.8M    5
+
+--- THERMAL ZONES ---
+soc-thermal: 43.5 °C
+bigcore0-thermal: 43.5 °C
+bigcore1-thermal: 43.5 °C
+littlecore-thermal: 43.5 °C
+center-thermal: 42.5 °C
+gpu-thermal: 42.5 °C
+npu-thermal: 42.5 °C
+
+--- TOP 10 PROCESSES BY MEMORY CONSUMPTION ---
+PID    PPID CMD                         %MEM %CPU
+   1875       1 /usr/sbin/tailscaled --stat  0.6  1.1
+ 298934  298932 /usr/share/rustdesk/rustdes  0.4  1.4
+   4330       1 /usr/bin/python3 /usr/bin/w  0.2  0.0
+   1876       1 /usr/bin/python3 /usr/share  0.2  0.0
+   1898       1 /usr/bin/rustdesk --service  0.1  5.1
+ 306679  306678 /home/orangepi/miniconda3/e  0.1 35.0
+   1892       1 /usr/bin/containerd          0.1  0.1
+   1208       1 /usr/lib/systemd/systemd-jo  0.1  0.0
+ 245711       1 /usr/lib/systemd/systemd-re  0.1  0.0
+   1420       1 /usr/sbin/NetworkManager --  0.1  0.0
+
+--- ACTIVE SYSTEM SERVICES (Brief) ---
+UNIT                         LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service      loaded active running Accounts Service
+  avahi-daemon.service         loaded active running Avahi mDNS/DNS-SD Stack
+  chrony.service               loaded active running chrony, an NTP client/server
+  colord.service               loaded active running Manage, Install and Generate Color Profiles
+  containerd.service           loaded active running containerd container runtime
+  cron.service                 loaded active running Regular background program processing daemon
+  dbus.service                 loaded active running D-Bus System Message Bus
+  haveged.service              loaded active running Entropy Daemon based on the HAVEGE algorithm
+  lircd.service                loaded active running Flexible IR remote input/output application support
+  NetworkManager.service       loaded active running Network Manager
+  polkit.service               loaded active running Authorization Manager
+  rkaiq_3A.service             loaded active running Enable Rockchip camera engine rkaiq
+  rsyslog.service              loaded active running System Logging Service
+  rustdesk.service             loaded active running RustDesk
+  serial-getty@ttyFIQ0.service loaded active running Serial Getty on ttyFIQ0
+  smartmontools.service        loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  ssh.service                  loaded active running OpenBSD Secure Shell server
+  systemd-journald.service     loaded active running Journal Service
+  systemd-logind.service       loaded active running User Login Management
+  systemd-resolved.service     loaded active running Network Name Resolution
+  systemd-udevd.service        loaded active running Rule-based Manager for Device Events and Files
+  tailscaled.service           loaded active running Tailscale node agent
+  udisks2.service              loaded active running Disk Manager
+  unattended-upgrades.service  loaded active running Unattended Upgrades Shutdown
+
+--- RKNPU DRIVER AND DEVICE NODE ---
+RKNPU driver: v0.9.8
+crw-rw----+ 1 root render 226, 129 Nov 26 12:59 /dev/dri/renderD129

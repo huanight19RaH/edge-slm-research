@@ -1,0 +1,63 @@
+=== LLAMA.CPP CPU SMOKE TEST EXECUTION LOG ===
+Timestamp: 2026-11-27 10:05:14 +07
+Command: /home/orangepi/TeamB_SLM/runtime/llama.cpp/build/bin/llama-cli -m /home/orangepi/TeamB_SLM/models/qwen2.5-0.5b-instruct-q4_k_m.gguf -p <|im_start|>system
+Bạn là trợ lý AI hữu ích.<|im_end|>
+<|im_start|>user
+Giải thích ngắn gọn lợi ích của Edge AI trên Orange Pi 5 trong 3 gạch đầu dòng.<|im_end|>
+<|im_start|>assistant
+ -n 128 -t 4 -c 512 --temp 0.7 --repeat-penalty 1.1 --single-turn --simple-io
+Return Code: 0
+Elapsed Time: 5.04 seconds
+Peak Process RSS: 740.39 MiB (0.723 GiB)
+Available RAM Before: 6.28 GiB -> After: 6.28 GiB
+Temperature Before: 43.5 °C -> After: 59.2 °C
+
+--- STDOUT (Model Generation) ---
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-e0b9fd7
+model      : /home/orangepi/TeamB_SLM/models/qwen2.5-0.5b-instruct-q4_k_m.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> <|im_start|>system
+Bạn là trợ lý AI hữu ích.<|im_end|>
+<|im_start|>user
+Giải thích ngắn gọn lợi ích của Edge AI trên Orange Pi 5 trong 3 gạch đầu dòng.<|im_end|>
+<|im_start|>assistant
+
+Để giải thích rõ ràng hơn về lợi ích của Edge AI trên Orange Pi 5 trong 3 gạch đầu dòng, tôi sẽ phân tích các yếu tố chính sau:
+
+1. Đa tính và hiệu suất: Edge AI (Edge Computing) giúp tăng khả năng xử lý dữ liệu và hoạt động faster thông qua việc sử dụng công nghệ thực tế và GPU. 
+
+2. Tích hợp dễ dàng với Orange Pi 5: Orange Pi 5 có cấu hình nhỏ gọn, phù hợp với việc tích hợp nhiều phần mềm và ứng dụng khác nhau.
+
+3. Độ phân tán dữ liệu lên tới 64 TB
+
+[ Prompt: 90.9 t/s | Generation: 41.8 t/s ]
+
+
+Exiting...
+
+
+--- STDERR (llama.cpp Telemetry & Timings) ---
+
